@@ -1,7 +1,7 @@
-import { LineData, Dataset } from "src/canvas/models/line-data";
+import { LineData, Dataset } from "../models/line-data";
 
 export class ExamplePlugin {
-    simpleLineData: LineData = [];
+    simpleLineData: LineData;
 
     constructor() {
         this.simpleLineData = <LineData>{

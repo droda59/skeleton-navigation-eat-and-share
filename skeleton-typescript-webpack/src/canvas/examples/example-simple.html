@@ -11,12 +11,15 @@
                             <a class="item" click.trigger="drawLine()">Ligne</a>
                             <a class="item" click.trigger="drawRect()">Rectangle</a>
                             <a class="item" click.trigger="drawCircle()">Cercle</a>
+                            <a class="item" click.trigger="drawGradient()">Dégradé</a>
+                            <a class="item" click.trigger="drawText()">Texte</a>
+                            <a class="item" click.trigger="drawImage()">Image</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="column">
-                <canvas id="canvas" width="400" height="200"></canvas>
+                <canvas id="canvas" width="400" height="200" style="border:1px solid #000000;"></canvas>
             </div>
     </section>
 </template>
