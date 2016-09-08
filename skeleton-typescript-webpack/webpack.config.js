@@ -12,7 +12,7 @@ const ENV = process.env.NODE_ENV && process.env.NODE_ENV.toLowerCase() || 'devel
 let config;
 
 // basic configuration:
-const title = 'Aurelia Navigation Skeleton';
+const title = 'Eat & Share - HTML5 Canvas';
 const baseUrl = '/';
 const rootDir = path.resolve();
 const srcDir = path.resolve('src');
@@ -24,8 +24,9 @@ const coreBundles = {
     'aurelia-polyfills',
     'aurelia-pal',
     'aurelia-pal-browser',
-    'regenerator-runtime',
-    'bluebird'
+    'regenerator-runtime'
+    // ,
+    // 'bluebird'
   ],
   // these will be included in the 'aurelia' bundle (except for the above bootstrap packages)
   aurelia: [
@@ -85,7 +86,7 @@ switch (ENV) {
         ({ filename: 'styles.css', allChunks: true, sourceMap: false }),
 
       require('@easy-webpack/config-fonts-and-images')(),
-      require('@easy-webpack/config-global-bluebird')(),
+      // require('@easy-webpack/config-global-bluebird')(),
       require('@easy-webpack/config-global-jquery')(),
       require('@easy-webpack/config-global-regenerator')(),
       require('@easy-webpack/config-generate-index-html')
@@ -121,7 +122,7 @@ switch (ENV) {
         ({ filename: 'styles.css', allChunks: true, sourceMap: false }),
 
       require('@easy-webpack/config-fonts-and-images')(),
-      require('@easy-webpack/config-global-bluebird')(),
+      // require('@easy-webpack/config-global-bluebird')(),
       require('@easy-webpack/config-global-jquery')(),
       require('@easy-webpack/config-global-regenerator')(),
       require('@easy-webpack/config-generate-index-html')(),
@@ -148,7 +149,7 @@ switch (ENV) {
         ({ filename: 'styles.css', allChunks: true, sourceMap: false }),
 
       require('@easy-webpack/config-fonts-and-images')(),
-      require('@easy-webpack/config-global-bluebird')(),
+      // require('@easy-webpack/config-global-bluebird')(),
       require('@easy-webpack/config-global-jquery')(),
       require('@easy-webpack/config-global-regenerator')(),
       require('@easy-webpack/config-generate-index-html')
