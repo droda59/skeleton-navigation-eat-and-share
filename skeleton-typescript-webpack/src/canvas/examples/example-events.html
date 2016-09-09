@@ -1,6 +1,9 @@
 <template>
-    <section>
-        <h2 class="ui dividing header">Exemple d'événement</h2>
-        <canvas id="canvas" width="400" height="200" style="border:1px solid #000000;"></canvas>
-    </section>
+    <require from="../example-base.html"></require>
+
+    <example-base title="Exemple d'événement" button="Événement">
+        <div class="menu">
+            <a class="item" click.trigger="setupMouseMove()">Position souris</a>
+        </div>
+    </example-base>
 </template>

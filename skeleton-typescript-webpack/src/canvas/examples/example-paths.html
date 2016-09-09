@@ -1,0 +1,11 @@
+<template>
+    <require from="../example-base.html"></require>
+
+    <example-base title="Exemple de path" button="Événement">
+        <div class="menu">
+            <a class="item" click.trigger="setupLiveStroke()">Live</a>
+            <a class="item" click.trigger="setupDeferredStroke()">Différé</a>
+            <a class="item" click.trigger="setupBezier()">Bézier</a>
+        </div>
+    </example-base>
+</template>

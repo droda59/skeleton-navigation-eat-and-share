@@ -4,8 +4,8 @@ export class ExampleSimple extends ExampleBase {
     drawLine() {
         this._clearCanvas();
         
-        this._ctx.moveTo(0, 0);
-        this._ctx.lineTo(200, 100);
+        this._ctx.moveTo(10, 10);
+        this._ctx.lineTo(this._canvas.width - 20, this._canvas.height - 20);
         this._ctx.stroke();
     }
 
@@ -20,7 +20,7 @@ export class ExampleSimple extends ExampleBase {
         this._clearCanvas();
 
         this._ctx.beginPath();
-        this._ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        this._ctx.arc(90, 90, 40, 0, 2 * Math.PI);
         this._ctx.stroke();
     }
 
@@ -35,7 +35,7 @@ export class ExampleSimple extends ExampleBase {
     drawGradient() {
         this._clearCanvas();
 
-        var grd = this._ctx.createLinearGradient(0, 0, this._canvas.width - 20, 0);
+        var grd = this._ctx.createLinearGradient(0, 0, this._canvas.width, 0);
         grd.addColorStop(0, "red");
         grd.addColorStop(1, "white");
 
@@ -51,9 +51,5 @@ export class ExampleSimple extends ExampleBase {
         imageObj.onload = () => {
             this._ctx.drawImage(imageObj, 10, 10);
         };
-    }
-
-    private _clearCanvas() {
-        this._ctx.clearRect(0, 0, this._canvas.width, this._canvas.height);
     }
 }

@@ -1,25 +1,14 @@
 <template>
-    <section>
-        <h2 class="ui dividing header">Exemple simple</h2>
-        <div class="ui four column grid">
-            <div class="column">
-                <div class="ui left floated primary button">
-                    <div class="ui simple dropdown item">
-                        Dessiner
-                        <i class="dropdown icon"></i>
-                        <div class="menu">
-                            <a class="item" click.trigger="drawLine()">Ligne</a>
-                            <a class="item" click.trigger="drawRect()">Rectangle</a>
-                            <a class="item" click.trigger="drawCircle()">Cercle</a>
-                            <a class="item" click.trigger="drawGradient()">Dégradé</a>
-                            <a class="item" click.trigger="drawText()">Texte</a>
-                            <a class="item" click.trigger="drawImage()">Image</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <canvas id="canvas" width="400" height="200" style="border:1px solid #000000;"></canvas>
-            </div>
-    </section>
+    <require from="../example-base.html"></require>
+
+    <example-base title="Exemple simple" button="Dessiner">
+        <div class="menu">
+            <a class="item" click.trigger="drawLine()">Ligne</a>
+            <a class="item" click.trigger="drawRect()">Rectangle</a>
+            <a class="item" click.trigger="drawCircle()">Cercle</a>
+            <a class="item" click.trigger="drawGradient()">Dégradé</a>
+            <a class="item" click.trigger="drawText()">Texte</a>
+            <a class="item" click.trigger="drawImage()">Image</a>
+        </div>
+    </example-base>
 </template>

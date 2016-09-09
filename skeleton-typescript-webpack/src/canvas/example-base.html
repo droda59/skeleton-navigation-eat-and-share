@@ -1,0 +1,19 @@
+<template bindable="title, button">
+    <section>
+        <h2 class="ui dividing header">${title}</h2>
+        <div class="ui four column grid">
+            <div class="column">
+                <div class="ui left floated primary button">
+                    <div class="ui simple dropdown item">
+                        ${button}
+                        <i class="dropdown icon"></i>
+                        <slot></slot>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <canvas id="canvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+            </div>
+        </div>
+    </section>
+</template>
