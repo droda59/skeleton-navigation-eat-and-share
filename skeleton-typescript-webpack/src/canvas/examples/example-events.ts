@@ -2,14 +2,6 @@ import { ExampleBase } from "../example-base";
 import { Coordinates } from "../models/coordinates";
 
 export class ExampleEvents extends ExampleBase {
-    setupMouseDown() {
-        this._clearEvents();
-        
-        this._canvas.onmousedown = e => {
-            // React to the mouse down event
-        };
-    }
-
     setupMouseMove() {
         this._clearEvents();
 

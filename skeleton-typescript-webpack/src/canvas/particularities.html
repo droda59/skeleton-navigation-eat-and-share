@@ -1,12 +1,71 @@
 <template>
     <section>
         <h2 class="ui header">Particularités</h2>
-        <ul class="ui middle aligned divided list">
-            <li class="item">Coordonnées sur des demi-pixels</li>
-            <li class="item">Besoin de redessiner la planète</li>
-            <li class="item">Calcul de positionnement</li>
-            <li class="item"></li>
-            <li class="item"></li>
-        </ul>
+        <div class="ui relaxed middle aligned celled list">
+            <div class="item">
+                <i class="history icon"></i>
+                <div class="content">
+                    <div class="header">Standardisé en 2006</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="laptop icon"></i>
+                <div class="content">
+                    <div class="header">Utilise le GPU</div>
+                    <div class="description">Ou les integrated chips dans le cas des laptops; touche presque tous les devices</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="high battery icon"></i>
+                <div class="content">
+                    <div class="header">Utilise peu de mémoire, bonnes performances</div>
+                    <div class="description">Stack d'états de plusieurs variables: transform, couleur, font</div>
+                    <div class="description">Il existe des façons d'optimiser le code pour dessiner pour donner une meilleure expérience</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="crop icon"></i>
+                <div class="content">
+                    <div class="header">Coordonnées calculées à partir du point supérieur gauche des pixels</div>
+                    <div class="description">On doit donc parfois avoir des coordonnées de demi-pixels, si nos lignes sont de grosseur impaire</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="world icon"></i>
+                <div class="content">
+                    <div class="header">Besoin de redessiner la planète</div>
+                    <div class="description">État courant et ordre d'affichage brisés, plus simple de tout redessiner</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="thumbs up icon"></i>
+                <div class="content">
+                    <div class="header">State save() / restore()</div>
+                    <div class="description">Stack d'états de plusieurs variables: transform, couleur, font</div>
+                    <div class="description">Sinon, états qui s'écrasent entre eux</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="crosshairs icon"></i>
+                <div class="content">
+                    <div class="header">Grand contrôle sur ce qu'on dessine</div>
+                    <div class="description">Couleurs, position exacte, transformations, animations</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="woman icon"></i>
+                <div class="content">
+                    <div class="header">Setup de la structure complexe</div>
+                    <div class="description">Doit coder les événements, le contrôle qu'on veut sur les objets, etc</div>
+                </div>
+            </div>
+            <div class="item">
+                <i class="ordered list icon"></i>
+                <div class="content">
+                    <div class="header">Ordre des événements</div>
+                    <div class="description">Images et fonts pas nécéssairement loadés lorsqu'on veut les utiliser</div>
+                </div>
+            </div>
+        </div>
     </section>
 </template>

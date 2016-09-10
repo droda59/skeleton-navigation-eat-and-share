@@ -43,6 +43,28 @@ export class ExampleSimple extends ExampleBase {
         this._ctx.fillRect(10, 10, this._canvas.width - 20, this._canvas.height - 20);
     }
 
+    drawOpacity() {
+        this._clearCanvas();
+
+        this._ctx.fillStyle = "blue";
+        this._ctx.globalAlpha = 0.8;
+        this._ctx.fillRect(10, 10, (this._canvas.width - 20) / 2, (this._canvas.height - 20) / 2);
+
+        this._ctx.fillStyle = "red";
+        this._ctx.globalAlpha = 0.6;
+        this._ctx.fillRect((this._canvas.width - 40) / 2, 10, (this._canvas.width + 10) / 2, (this._canvas.height - 20) / 2);
+
+        this._ctx.fillStyle = "blue";
+        this._ctx.globalAlpha = 0.4;
+        this._ctx.fillRect((this._canvas.width - 40) / 2, (this._canvas.height - 40) / 2, (this._canvas.width + 10) / 2, (this._canvas.height + 10) / 2);
+
+        this._ctx.fillStyle = "red";
+        this._ctx.globalAlpha = 0.2;
+        this._ctx.fillRect(10, (this._canvas.height - 40) / 2, (this._canvas.width - 20) / 2, (this._canvas.height + 10) / 2);
+        
+        this._ctx.globalAlpha = 1.0;
+    }
+
     drawImage() {
         this._clearCanvas();
 

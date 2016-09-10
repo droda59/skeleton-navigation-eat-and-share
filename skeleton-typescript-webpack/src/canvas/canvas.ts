@@ -3,7 +3,7 @@ import {Router, RouterConfiguration} from "aurelia-router";
 export class Canvas {
   router: Router;
 
-  heading = "Examples";
+  heading = "Exemples";
 
   configureRouter(config: RouterConfiguration, router: Router) {
     config.map([
