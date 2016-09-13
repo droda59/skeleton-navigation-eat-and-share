@@ -4,17 +4,17 @@
   <section>
     <h2 class="ui header">${heading}</h2>
     <div class="ui cards">
-      <div repeat.for="user of users" class="ui card">
+      <div repeat.for="recipe of recipes" class="ui card">
         <div class="content">
-          <img class="ui avatar image" src.bind="user.avatar_url" crossorigin ref="image"> ${user.login}
+          <img class="ui avatar image" src.bind="recipe.smallImageUrl" crossorigin ref="image"> ${recipe.title}
         </div>
         <div class="image">
           <canvas width="290" height="74" blur-image.bind="image"></canvas>
         </div>
         <div class="extra content">
-          <a href.bind="user.html_url">
+          <a href="http://elee.menu/#/recipe/${recipe._id}">
             <i class="user icon"></i>
-            Contact
+            Follow recipe
           </a>
         </div>
       </div>

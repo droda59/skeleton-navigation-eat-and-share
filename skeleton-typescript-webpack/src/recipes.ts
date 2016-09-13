@@ -4,15 +4,15 @@ import {HttpClient} from 'aurelia-fetch-client';
 // polyfill fetch client conditionally
 const fetch = !self.fetch ? System.import('isomorphic-fetch') : Promise.resolve(self.fetch);
 
-interface IUser {
-  avatar_url: string;
-  login: string;
-  html_url: string;
+interface IRecipe {
+    _id: string;
+    title: string;
+    smallImageUrl: string;
 }
 
-export class Users {
-  heading: string = 'Github Users';
-  users: Array<IUser> = [];
+export class Recipes {
+  heading: string = 'elee.menu Recipes';
+  recipes: Array<IRecipe> = [];
   http: HttpClient;
 
   constructor(@lazy(HttpClient) private getHttpClient: () => HttpClient) {}
@@ -21,14 +21,13 @@ export class Users {
     // ensure fetch is polyfilled before we create the http client
     await fetch;
     const http = this.http = this.getHttpClient();
-
     http.configure(config => {
-      config
-        .useStandardConfiguration()
-        .withBaseUrl('https://api.github.com/');
+        config
+            .useStandardConfiguration()
+            .withBaseUrl("http://eleeapi.azurewebsites.net/");
     });
 
-    const response = await http.fetch('users');
-    this.users = await response.json();
+    const response = await http.fetch('api/quickrecipe/search?query=');
+    this.recipes = await response.json();
   }
 }
